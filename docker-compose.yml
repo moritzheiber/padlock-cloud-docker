@@ -1,0 +1,14 @@
+version: "3"
+services:
+  padlock-cloud:
+    image: padlock-cloud
+    ports:
+      - "5555:5555"
+    volumes:
+      - padlock-data:/padlock/db
+    network_mode: bridge
+    environment:
+      BASE_URL: "http://localhost"
+
+volumes:
+  padlock-data:

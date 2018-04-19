@@ -1,0 +1,9 @@
+# vim ft=yml
+---
+server:
+  assets_path: /padlock/assets
+  port: 5555
+  base_url: {{ env "BASE_URL" }}
+  cors: true
+leveldb:
+  path: /padlock/db
