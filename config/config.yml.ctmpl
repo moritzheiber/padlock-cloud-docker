@@ -5,5 +5,12 @@ server:
   port: 5555
   base_url: {{ env "BASE_URL" }}
   cors: true
+  whitelist_path: /padlock/whitelist
 leveldb:
   path: /padlock/db
+email:
+  server: {{ env "EMAIL_SERVER" }}
+  port: {{ or (env "EMAIL_PORT") "587" }}
+  user: {{ env "EMAIL_USER" }}
+  password: {{ env "EMAIL_PASSWORD" }}
+  from: {{ env "EMAIL_FROM" }}

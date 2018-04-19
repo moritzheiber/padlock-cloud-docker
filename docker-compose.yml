@@ -9,6 +9,7 @@ services:
     network_mode: bridge
     environment:
       BASE_URL: "http://localhost"
+      WHITELIST: "hello@example.com"
 
 volumes:
   padlock-data:

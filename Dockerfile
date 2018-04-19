@@ -17,6 +17,7 @@ RUN apk --no-cache add git && \
   rm -r /tmp/padlock-cloud /tmp/_padlock-cloud
 
 ADD config/config.yml.ctmpl /padlock/
+ADD config/whitelist.ctmpl /padlock/
 ADD config/consul-template-config.hcl /padlock/
 
 EXPOSE 5555
